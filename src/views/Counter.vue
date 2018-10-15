@@ -2,13 +2,13 @@
   <div>
     <h3>It's a Counter.</h3>
     <p>
-      Count: {{ $store.state.count  }}
+      Count: {{ $store.state.counterModule.count  }}
     </p>
     <button @click="addCount"> + </button>
     <button @click="minusCount"> - </button>
     <button @click="showCount"> Show Count </button>
     <p>
-      {{ $store.state.errorMsg }}</p>
+      {{ $store.state.counterModule.errorMsg }}</p>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
       'addCount', 'minusCount'
     ]),
     showCount: function () {
-      alert(this.$store.state.count)
+      alert(this.$store.state.counterModule.count)
     }
   }
 }
