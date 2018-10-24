@@ -16,18 +16,12 @@
 import { mapActions } from 'vuex'
 
 export default {
-  data () {
-    return {
-      count: 0,
-      errorMsg: ''
-    }
-  },
   methods: {
     ...mapActions([
       'addCount', 'minusCount'
     ]),
     showCount: function () {
-      alert(this.$store.state.counterModule.count)
+      alert('count is ' + this.$store.state.counterModule.count)
     }
   }
 }
